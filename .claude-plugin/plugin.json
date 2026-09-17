@@ -1,0 +1,13 @@
+{
+  "name": "project-audit",
+  "description": "Stack-aware codebase audit that produces a technical audit, a client-friendly brief, and an hours estimate. Runs parallel reviewer agents (security, structure, frontend, dependencies, plus Stripe/Supabase/Convex/Firebase/mobile/messaging/cloud specialists when detected) and recommends the official plugins for each detected service.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Riyaancode",
+    "url": "https://github.com/Riyaancode"
+  },
+  "homepage": "https://github.com/Riyaancode/claude-audit-plugin",
+  "repository": "https://github.com/Riyaancode/claude-audit-plugin",
+  "license": "MIT",
+  "keywords": ["audit", "code-review", "security", "estimation", "stripe", "supabase", "production-readiness"]
+}
