@@ -12,7 +12,7 @@
 | Types check | ✅/❌/— |
 | Tests | ✅ <n> pass / ❌ / — none found |
 | Lint | ✅ / ⚠️ <n> issues (<m> formatting) / — |
-| Known vulnerabilities | <n> high, <n> moderate / ✅ none |
+| Known vulnerabilities | <n> advisories (<worst package>, fix available?) / ✅ none |
 | Secrets in the client bundle | ✅ none / ❌ <what> |
 | Settings file committed | ✅ no / ⚠️ yes (<n> keys, names only) |
 
@@ -21,7 +21,7 @@
 | Module | Provider |
 |---|---|
 
-Package manager: <pm>. Git history: <yes, n commits / none>.
+Package manager: <pm> (<lockfile honoured, or "lockfile is X but X is not installed; ran with npm">). Git history: <yes, n commits / none>.
 
 ## Size and shape
 
@@ -35,7 +35,7 @@ Package manager: <pm>. Git history: <yes, n commits / none>.
 
 ## Recommended official plugins for a full audit
 
-- <service> — installed ✅ / missing ❌ `<install command>`
+Installed: <list>. Missing: <service> `<install command>`; <service> `<install command>`.
 
 ## Where a full audit would look first
 

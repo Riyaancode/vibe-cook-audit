@@ -37,7 +37,10 @@ Ignore stray files such as `firebase-debug.log`; a log is not a signal.
 3. **Source signals**: environment-variable names and API hostnames grepped
    in the source tree (`grep -rE "<pattern>" src app lib server` and the
    `.env*` files, names only). This catches services called over raw HTTP
-   with no SDK. A source-signal match counts the same as a dependency match.
+   with no SDK. A source-signal match counts the same as a dependency match
+   for detection, but it is labelled "(source signal only)" in the stack table
+   and placed in the module the surrounding code implies (an `EXPO_ACCESS_TOKEN`
+   in a push-dispatch file is a Push row, not a Mobile row).
 
 ## Package manager
 
@@ -90,7 +93,7 @@ SvelteKit, Astro, Expo). `vite` is shown only when no framework row matched.
 | `@google-cloud/*` | — | `GOOGLE_APPLICATION_CREDENTIALS`, `googleapis.com` (non-FCM) | Google Cloud | Cloud | — | — | cloud-reviewer |
 | `@azure/*` | — | `AZURE_*` | Azure | Cloud | `azure@claude-plugins-official` | (pre-registered) | cloud-reviewer |
 | `@vercel/*`, `vercel` | `vercel.json` | `VERCEL_*` | Vercel | Hosting | `vercel@claude-plugins-official` | (pre-registered) | — |
-| `wrangler`, `@cloudflare/*`, `nitro` (cloudflare preset) | `wrangler.toml`, `wrangler.json` | `CLOUDFLARE_*`, `.wrangler/` folder, `cloudflare-module` in nitro config | Cloudflare | Hosting | `cloudflare@claude-plugins-official` | (pre-registered) | — |
+| `wrangler`, `@cloudflare/*`, `nitro` (cloudflare preset) | `wrangler.toml`, `wrangler.json`, `.wrangler/` | `CLOUDFLARE_*`, `cloudflare-module` in nitro config | Cloudflare | Hosting | `cloudflare@claude-plugins-official` | (pre-registered) | — |
 | `netlify-cli`, `@netlify/*` | `netlify.toml` | — | Netlify | Hosting | `netlify-skills@claude-plugins-official` | (pre-registered) | — |
 | `@lovable.dev/*` | `.lovable/` | `LOVABLE_API_KEY`, `LOVABLE_CRON_SECRET`, `*.lovable.app` | Lovable | Hosting / Platform | `lovable@claude-plugins-official` | (pre-registered) | — |
 | `cloudinary`, `@cloudinary/*` | — | `CLOUDINARY_URL`, `res.cloudinary.com` | Cloudinary | File storage / Media | `cloudinary@claude-plugins-official` | (pre-registered) | — |

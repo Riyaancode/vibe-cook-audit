@@ -14,7 +14,7 @@ record "could not run: <reason>".
 | Install | `npm install --ignore-scripts --no-audit --no-fund` | `pnpm install --ignore-scripts` | `yarn install --ignore-scripts` | `bun install --ignore-scripts` |
 | Typecheck | `npx tsc --noEmit -p tsconfig.json` (if `tsconfig.json`) | same via `pnpm exec` | same via `yarn` | same via `bunx` |
 | Lint | `npm run lint` if script exists, else `npx eslint .` if `eslint.config.*`/`.eslintrc*` | | | |
-| Unit tests | `npm test` if script exists, else `npx vitest run` / `npx jest` by config presence | | | |
+| Unit tests | `npm test` if script exists; else `npx vitest run` or `npx jest` when the runner is in devDependencies or `*.test.*`/`*.spec.*` files exist | | | |
 | Build | `npm run build` if script exists | | | |
 | Vulnerabilities | `npm audit --json` | `pnpm audit --json` | `yarn npm audit --json` | `bun audit` (if available) else `npm audit --json` |
 | Outdated | `npm outdated` | `pnpm outdated` | `yarn outdated` | `bun outdated` |
@@ -34,6 +34,8 @@ SERVICE_ROLE|SUPABASE_SERVICE|STRIPE_SECRET|STRIPE_WEBHOOK|sk_live_|rk_live_|whs
 AUTH_TOKEN|API_SECRET|PRIVATE_KEY|-----BEGIN|AKIA[0-9A-Z]{16}|sb_secret_
 ```
 
+Known-harmless hits to dismiss quickly: `sb_secret_` inside supabase-js's key-prefix check; a `VITE_*`/`NEXT_PUBLIC_*` Google Maps browser key (`AIza…`), which is public by design but must be referrer-restricted.
+
 Also grep the source for hard-coded live keys: `sk_live_`, `rk_live_`,
 `AIza[0-9A-Za-z_-]{35}`, `ghp_`, `xox[baprs]-`, `-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY`.
 
@@ -41,7 +43,7 @@ Also grep the source for hard-coded live keys: `sk_live_`, `rk_live_`,
 
 - Is `.env` (or any `.env.*` other than `.env.example`) present and not in
   `.gitignore`? List every variable name it contains (never the values).
-- Stray files at the root: `*.log`, screenshots, `*.bak`, editor files.
+- Stray files at the root: `*.log`, screenshots, `*.bak`, editor files. Output from earlier runs of this plugin (`audit.md`, `audit-brief.md`, `estimate.md`, `taste.md`) is not stray; mention it once as "previous audit output present".
 - Is there git history? If not, say so; commit-pattern analysis is skipped.
 - Lockfile present and matches the package manager in use?
 - `README` is boilerplate? `.env.example` exists? Setup steps documented?
@@ -51,7 +53,7 @@ Also grep the source for hard-coded live keys: `sk_live_`, `rk_live_`,
 - Total lines of source by language (`find` + `wc`, excluding generated,
   vendored and lockfiles).
 - Files over 700 lines, with line counts.
-- Counts of `any`, `@ts-ignore`/`@ts-expect-error`, `eslint-disable`,
+- Counts of `any` (prefer ESLint's `no-explicit-any` count over grep; if grepping, quote `--include='*.ts'` so the shell does not expand it), `@ts-ignore`/`@ts-expect-error`, `eslint-disable`,
   `console.log`, `TODO|FIXME|HACK`, `dangerouslySetInnerHTML`.
 - Test files count and test count from the runner output.
 - Largest built client chunks (`du -k`, top 10) and total client JS bytes.
