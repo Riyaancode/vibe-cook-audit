@@ -36,7 +36,7 @@ docs/superpowers/      design spec and implementation plan (history, not instruc
 - **Verification before publication.** Every Critical/High finding is re-checked by the orchestrator against the code. Reviewer agents propose; they never publish. Keep this in `audit-workflow` step 5 and `references/severity.md`.
 - **Pre-flight stop.** `/cook` stops the turn when a recommended vendor plugin is missing. `/taste` never stops. Do not soften either.
 - **Brief has no code terms.** No paths, identifiers, line numbers, package names, HTTP codes, time units. Effort is Low/Medium/High only. See the translation table in `audit-brief-writing`.
-- **Calibration stays hidden.** `estimate-writing/references/calibration.md` factors and task-type labels never appear in `estimate.md`. Phase budgets (`phase2=40`) rescale calibrated rows proportionally to an exact sum.
+- **Calibration stays hidden.** `estimate-writing/references/calibration.md` factors and task-type labels never appear in `estimate.md`. Optional phase budgets (`phaseN=<hours>`) rescale calibrated rows proportionally to an exact sum.
 - **Read-only.** The audited project is never modified except for the output files (and its own build output).
 - **Registry is the single source of stack knowledge.** Detection, stack table, reviewer activation and plugin recommendations all come from `audit-workflow/references/service-registry.md`. Add services there, nowhere else.
 - **Skill descriptions start with "Use when"** and describe triggers only, never the workflow (agents follow a summarised description instead of reading the skill).
@@ -55,7 +55,7 @@ docs/superpowers/      design spec and implementation plan (history, not instruc
 Skills are tested by dispatching a subagent that reads the skill files directly and applies them to a real project, writing outputs to a scratch folder, and ending with a "## Skill feedback" section listing every ambiguity or guess. Fold that feedback back into the skill, re-run, commit. Reference project used so far: Skill IQ (TanStack Start + Supabase + Stripe + Capacitor). The four existing test shapes:
 
 - **A** stack detection + pre-flight (steps 1–2 of `audit-workflow` only)
-- **B** `estimate-writing` with `phase2=40`: exact subtotal, no leaked calibration terms, mobile excluded
+- **B** `estimate-writing` with `phase2=40 exclude=p4`: exact subtotal, no leaked calibration terms, phase 4 listed under Not included
 - **C** `audit-brief-writing`: grep checks pass, blockers = audit Critical items, real client questions
 - **D** `quick-scan` with `no-install`: no pauses, no severity words, under ~70 lines
 

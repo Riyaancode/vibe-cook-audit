@@ -7,7 +7,7 @@ Taste it, cook it, plate it, bill it. A stack-aware codebase audit kitchen that 
 | `/taste` | Quick scan: stack table, build, typecheck, tests, vulnerability check, hygiene, one-page first impression. Minutes, no agents. | `taste.md` |
 | `/cook` | Full audit: detects the stack, recommends official plugins, runs baseline checks, fans out parallel reviewer agents, verifies every Critical/High finding by hand. | `audit.md`, `audit-brief.md` |
 | `/plate` | Rewrites an existing `audit.md` into the plain-language client brief. | `audit-brief.md` |
-| `/bill [phase2=40 …] [include-mobile]` | Hours and timeline per fix, for client quotes. Optional phase budgets rescale that phase exactly. | `estimate.md` |
+| `/bill [phaseN=<hours>] [total=<hours>] [exclude=pN]` | Hours and timeline per fix, for client quotes. All arguments are optional: with none, every phase in the brief is estimated as-is. A budget rescales that phase (or the total) to exactly that many hours; `exclude` leaves a phase to be quoted separately. | `estimate.md` |
 
 ## Install
 
@@ -28,6 +28,10 @@ claude plugin install vibe-cook-audit@Riyaancode
 ```
 
 The `/plugin` command is not available inside IDE chat panels; use the terminal or the CLI form.
+
+### Recommended vendor plugins (optional)
+
+`/cook` checks for these before the audit starts and prints the commands for the ones your project needs, so you can also install them up front. Specialist reviewers load their best-practice skills, which makes the audit more accurate. Install only the ones that match your stack. The full list, with plugin ids and marketplace sources, is in `skills/audit-workflow/references/service-registry.md`.
 
 ## What `/cook` does
 
