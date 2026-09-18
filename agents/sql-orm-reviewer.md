@@ -1,6 +1,6 @@
 ---
 name: sql-orm-reviewer
-description: Use when auditing a Prisma, Drizzle, Neon or plain SQL database layer: migrations, constraints, indexes, raw queries, pooling. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a Prisma, Drizzle, Neon or plain SQL database layer: migrations, constraints, indexes, raw queries, pooling. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: messaging-reviewer
-description: Use when auditing email, SMS or push delivery: Twilio, SendGrid, Resend, consent, unsubscribe, inbound webhooks, automations. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing email, SMS or push delivery: Twilio, SendGrid, Resend, consent, unsubscribe, inbound webhooks, automations. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

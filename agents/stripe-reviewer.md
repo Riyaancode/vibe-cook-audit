@@ -1,6 +1,6 @@
 ---
 name: stripe-reviewer
-description: Use when auditing a Stripe integration: webhooks, checkout, subscriptions, Connect, refunds, idempotency, best-practice compliance. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a Stripe integration: webhooks, checkout, subscriptions, Connect, refunds, idempotency, best-practice compliance. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

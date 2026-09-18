@@ -1,6 +1,6 @@
 ---
 name: dependency-reviewer
-description: Use when auditing third-party dependencies, vulnerability audit output, version drift, lockfiles and supply-chain hygiene. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing third-party dependencies, vulnerability audit output, version drift, lockfiles and supply-chain hygiene. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

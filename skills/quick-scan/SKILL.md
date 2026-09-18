@@ -1,0 +1,35 @@
+---
+name: quick-scan
+description: Use when someone wants a fast first impression of a codebase's health before committing to a full audit, when asked "is this project in decent shape", or when /taste is invoked.
+---
+
+# Quick scan
+
+## Overview
+
+A first taste: what the project is built with, whether it builds, tests and lints, whether anything obviously dangerous is committed, and where a full audit would look first. No reviewer agents, no code-path review. Output is `taste.md`, one page.
+
+**Announce at start:** "Using quick-scan for a first taste of <project>."
+
+## Recipe
+
+1. **Detect the stack** exactly as step 1 of the `audit-workflow` skill: real manifests only, folder signals, source signals from `../audit-workflow/references/service-registry.md`. Produce the stack table and the package manager.
+2. **Plugin availability.** For each detected service with a plugin id, report installed ✅ or missing ❌ with the install command. Do not stop; this is information for the reader, not a gate.
+3. **Baseline checks** from `../audit-workflow/references/baseline-checks.md`: install (unless `no-install`), typecheck, lint, tests, build, vulnerability audit, client-bundle secret scan, repo hygiene, size and shape metrics. Run the slow ones in the background and continue with the metrics.
+4. **Write `taste.md`** from `templates/taste.md` in the project root. Fill "Where a full audit would look first" from what the signals suggest: payments present → payments flows; database migrations present → access rules; failing build → the first error; no tests → the riskiest untested area; committed settings file → secrets handling.
+5. **Report in chat:** the verdict sentence, the signals table, and the suggestion to run `/cook`.
+
+## Rules
+
+- Read-only except `taste.md`.
+- Every signal row has a result or "could not run: <reason>". Never a blank.
+- No severity ratings, no findings tables, no file:line citations beyond naming the largest files. Anything that looks like a finding is phrased as "a full audit would check …". The quick scan must not be mistaken for the audit.
+- Under about 60 lines.
+
+## Red flags
+
+| Thought | Reality |
+|---|---|
+| "I noticed an unverified webhook, I'll flag it as Critical" | Not here. Note it under "where a full audit would look first" and move on. |
+| "Install is slow, skip the build" | Run it in the background; the build is the most informative signal. |
+| "Missing plugins, I'll stop and ask" | The quick scan never stops. List them and continue. |

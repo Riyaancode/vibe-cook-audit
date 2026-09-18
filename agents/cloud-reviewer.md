@@ -1,6 +1,6 @@
 ---
 name: cloud-reviewer
-description: Use when auditing AWS, GCP or Azure usage: IAM, buckets, serverless auth, secrets management, infrastructure as code. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing AWS, GCP or Azure usage: IAM, buckets, serverless auth, secrets management, infrastructure as code. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

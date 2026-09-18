@@ -1,6 +1,6 @@
 ---
 name: frontend-reviewer
-description: Use when auditing frontend feature completeness, half-done features, route integrity, UI contradictions, performance and PWA behaviour. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing frontend feature completeness, half-done features, route integrity, UI contradictions, performance and PWA behaviour. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

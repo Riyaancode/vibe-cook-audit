@@ -1,6 +1,6 @@
 ---
 name: structure-reviewer
-description: Use when auditing a codebase's structure, naming, dead code, oversized files, documentation and setup story. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a codebase's structure, naming, dead code, oversized files, documentation and setup story. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

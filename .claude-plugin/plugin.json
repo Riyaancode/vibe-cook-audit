@@ -1,13 +1,22 @@
 {
-  "name": "project-audit",
-  "description": "Stack-aware codebase audit that produces a technical audit, a client-friendly brief, and an hours estimate. Runs parallel reviewer agents (security, structure, frontend, dependencies, plus Stripe/Supabase/Convex/Firebase/mobile/messaging/cloud specialists when detected) and recommends the official plugins for each detected service.",
+  "name": "vibe-cook-audit",
+  "description": "Taste, cook, plate, bill: a stack-aware codebase audit kitchen. /taste gives a quick first impression, /cook runs the full multi-agent audit, /plate rewrites it for clients, /bill estimates the fixes. Detects Stripe, Supabase, Convex, Firebase, mobile, messaging and cloud services and recommends their official plugins.",
   "version": "0.1.0",
   "author": {
     "name": "Riyaancode",
     "url": "https://github.com/Riyaancode"
   },
-  "homepage": "https://github.com/Riyaancode/claude-audit-plugin",
-  "repository": "https://github.com/Riyaancode/claude-audit-plugin",
+  "homepage": "https://github.com/Riyaancode/vibe-cook-audit",
+  "repository": "https://github.com/Riyaancode/vibe-cook-audit",
   "license": "MIT",
-  "keywords": ["audit", "code-review", "security", "estimation", "stripe", "supabase", "production-readiness"]
+  "keywords": [
+    "audit",
+    "code-review",
+    "security",
+    "estimation",
+    "stripe",
+    "supabase",
+    "production-readiness",
+    "vibe-coding"
+  ]
 }

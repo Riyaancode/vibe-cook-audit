@@ -1,9 +1,9 @@
 ---
-description: Run a stack-aware production-readiness audit of the current project and write audit.md and audit-brief.md
+description: Full audit — stack detection, plugin pre-flight, baseline checks, parallel reviewers, verification; writes audit.md and audit-brief.md
 argument-hint: [optional focus, e.g. "payments only" or "skip baseline checks"]
 ---
 
-Load the `project-audit:audit-workflow` skill with the Skill tool and follow it end to end for the project in the current working directory.
+Load the `vibe-cook-audit:audit-workflow` skill with the Skill tool and follow it end to end for the project in the current working directory.
 
 Arguments from the user: $ARGUMENTS
 

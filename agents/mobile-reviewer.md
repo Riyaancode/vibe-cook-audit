@@ -1,6 +1,6 @@
 ---
 name: mobile-reviewer
-description: Use when auditing a Capacitor, Expo or React Native app: push, deep links, store requirements, native auth, in-app purchases. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a Capacitor, Expo or React Native app: push, deep links, store requirements, native auth, in-app purchases. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

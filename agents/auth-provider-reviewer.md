@@ -1,6 +1,6 @@
 ---
 name: auth-provider-reviewer
-description: Use when auditing an auth provider integration such as Clerk, Auth0, Auth.js or WorkOS: session verification, roles, webhooks, redirects. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing an auth provider integration such as Clerk, Auth0, Auth.js or WorkOS: session verification, roles, webhooks, redirects. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

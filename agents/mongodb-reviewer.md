@@ -1,6 +1,6 @@
 ---
 name: mongodb-reviewer
-description: Use when auditing a MongoDB or Mongoose data layer: schema validation, indexes, injection, pooling. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a MongoDB or Mongoose data layer: schema validation, indexes, injection, pooling. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: firebase-reviewer
-description: Use when auditing Firebase: security rules, Cloud Functions auth, storage rules, FCM, config exposure. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing Firebase: security rules, Cloud Functions auth, storage rules, FCM, config exposure. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

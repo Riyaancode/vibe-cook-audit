@@ -1,6 +1,6 @@
 ---
 name: convex-reviewer
-description: Use when auditing a Convex backend: validators, auth in functions, indexes, http actions, crons. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a Convex backend: validators, auth in functions, indexes, http actions, crons. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

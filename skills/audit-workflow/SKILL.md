@@ -1,6 +1,6 @@
 ---
 name: audit-workflow
-description: Use when asked to audit a codebase, review production readiness, do a security or code review of a whole project, check what is finished or half-done, or produce an audit document for a client. Also use when /audit is invoked.
+description: Use when asked to audit a codebase, review production readiness, do a security or code review of a whole project, check what is finished or half-done, or produce an audit document for a client. Also use when /cook is invoked.
 ---
 
 # Audit workflow
@@ -29,7 +29,7 @@ Work through these in order. Create a todo per step.
 
 7. **Write `audit-brief.md`.** Load the `audit-brief-writing` skill and apply it to the `audit.md` you just wrote.
 
-8. **Report in chat.** Verdict, the blockers in one line each, both file paths, and the items that could not be verified without live access. Offer `/estimate` as the next step.
+8. **Report in chat.** Verdict, the blockers in one line each, both file paths, and the items that could not be verified without live access. Offer `/bill` as the next step.
 
 ## Hard rules
 
@@ -47,4 +47,4 @@ Work through these in order. Create a todo per step.
 | "The reviewer cited a line, that's verified" | Reviewers hallucinate line numbers and policy names. Open the file. |
 | "This project is small, skip the parallel agents" | Small projects still have payments and auth. Run at least the four core reviewers. |
 | "Build failed, I'll note it and move on" | A failed build is a finding *and* a blocker for the bundle secret scan. Diagnose the first error. |
-| "I'll put hours in the brief" | The brief uses Low/Medium/High only. Hours belong to `/estimate`. |
+| "I'll put hours in the brief" | The brief uses Low/Medium/High only. Hours belong to `/bill`. |

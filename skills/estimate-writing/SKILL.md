@@ -1,6 +1,6 @@
 ---
 name: estimate-writing
-description: Use when asked for an hours estimate, effort estimate, quote, or timeline for the tasks in an audit or brief, or when /estimate is invoked.
+description: Use when asked for an hours estimate, effort estimate, quote, or timeline for the tasks in an audit or brief, or when /bill is invoked.
 ---
 
 # Estimate writing
@@ -13,7 +13,7 @@ Turns the phased plan in a client brief into `estimate.md`: one row per task wit
 
 ## Input
 
-The brief is, in order of precedence: a path the user gives in the arguments; `audit-brief.md` in the current working directory; any other `*.md` in the root whose headings include "Recommended plan" and either "block launch" or "Scorecard" (name it and ask the user to confirm in the same turn, then proceed). Never estimate from the full technical `audit.md`; its detail level inflates rows. If no brief is found, stop and report: what was searched, what candidate files exist, and that `/audit` produces the brief.
+The brief is, in order of precedence: a path the user gives in the arguments; `audit-brief.md` in the current working directory; any other `*.md` in the root whose headings include "Recommended plan" and either "block launch" or "Scorecard" (name it and ask the user to confirm in the same turn, then proceed). Never estimate from the full technical `audit.md`; its detail level inflates rows. If no brief is found, stop and report: what was searched, what candidate files exist, and that `/cook` produces the brief.
 
 Read sections by heading, not number: the **"Recommended plan"** section gives the phases and their items; the **"block launch"** and **"Important problems"** sections give the detail for each item.
 

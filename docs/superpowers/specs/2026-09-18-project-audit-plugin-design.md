@@ -141,3 +141,10 @@ IQ project, confirm the three files are produced, the stack table matches
 reality, the pre-flight lists Stripe/Supabase plugins as installed, and the
 Critical findings match the manual audit. Run `/estimate phase2=40` and
 confirm the phase subtotal is exactly 40.
+
+## Addendum (2026-09-18): rename and quick scan
+
+Plugin renamed to `vibe-cook-audit` (repo `github.com/Riyaancode/vibe-cook-audit`).
+Commands: `/taste` (new `quick-scan` skill: stack table, baseline checks,
+one-page first impression in `taste.md`, no reviewer agents, never stops),
+`/cook` (was `/audit`), `/plate` (was `/audit-brief`), `/bill` (was `/estimate`).

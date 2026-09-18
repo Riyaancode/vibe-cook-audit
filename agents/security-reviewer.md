@@ -1,6 +1,6 @@
 ---
 name: security-reviewer
-description: Use when auditing application-layer security: server endpoints, auth, IDOR, input validation, secrets, injection, SSRF, rate limiting. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing application-layer security: server endpoints, auth, IDOR, input validation, secrets, injection, SSRF, rate limiting. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

@@ -10,8 +10,8 @@
   },
   "plugins": [
     {
-      "name": "project-audit",
-      "description": "Use when a codebase needs a production-readiness audit, security review, feature-completeness check, client-friendly summary, or an hours estimate. Detects the stack (Stripe, Supabase, Convex, Firebase, Neon, MongoDB, Clerk, Expo, Capacitor, Twilio, AWS, and more), recommends the official plugin for each, runs parallel reviewer agents, and writes audit.md, audit-brief.md and estimate.md.",
+      "name": "vibe-cook-audit",
+      "description": "Use when a vibe-coded or hand-written codebase needs a production-readiness audit, security review, feature-completeness check, client-friendly summary, or an hours estimate. Commands: /taste (quick scan), /cook (full audit), /plate (client brief), /bill (estimate). Detects the stack (Stripe, Supabase, Convex, Firebase, Neon, MongoDB, Clerk, Expo, Capacitor, Twilio, AWS, and more) and recommends the official plugin for each.",
       "source": "./",
       "category": "development",
       "keywords": [
@@ -19,7 +19,8 @@
         "security",
         "code-review",
         "estimation",
-        "production-readiness"
+        "production-readiness",
+        "vibe-coding"
       ],
       "version": "0.1.0"
     }

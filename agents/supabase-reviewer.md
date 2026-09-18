@@ -1,6 +1,6 @@
 ---
 name: supabase-reviewer
-description: Use when auditing a Supabase project: RLS, migrations, SECURITY DEFINER functions, storage policies, triggers, cron, schema baseline. Read-only reviewer used by the project-audit workflow.
+description: Use when auditing a Supabase project: RLS, migrations, SECURITY DEFINER functions, storage policies, triggers, cron, schema baseline. Read-only reviewer used by the vibe-cook-audit workflow.
 tools: Read, Grep, Glob, Bash
 ---
 

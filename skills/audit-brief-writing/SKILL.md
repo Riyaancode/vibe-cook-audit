@@ -1,6 +1,6 @@
 ---
 name: audit-brief-writing
-description: Use when turning a technical audit into a version a non-technical client can read, when asked for a brief or summary of an audit, when a document will be walked through on a call, or when /audit-brief is invoked.
+description: Use when turning a technical audit into a version a non-technical client can read, when asked for a brief or summary of an audit, when a document will be walked through on a call, or when /plate is invoked.
 ---
 
 # Audit brief writing
