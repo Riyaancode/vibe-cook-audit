@@ -1,7 +1,7 @@
 # <Project name> — Effort Estimate
 
 **Date:** <date>
-**Basis:** the tasks listed in `audit-brief.md` (Phases <1 to N>). <Anything excluded, e.g. "The mobile app is estimated separately.">
+**Basis:** the tasks listed in `<brief file>` (Phases <1 to N>). <Anything excluded, e.g. "The mobile app is estimated separately.">
 **How the hours were set:** all work is executed with Claude Code driven by one developer. Hours cover implementation, the developer's review of the generated code, and testing. They do not include waiting on client decisions, third-party review turnaround, or a separate QA team.
 
 **Working assumption for the timeline:** one developer, 6 productive hours per day, 5 days a week.
