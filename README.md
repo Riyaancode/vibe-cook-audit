@@ -11,10 +11,23 @@ Taste it, cook it, plate it, bill it. A stack-aware codebase audit kitchen that 
 
 ## Install
 
+Inside a Claude Code terminal session, run these **one at a time** (the first opens a short dialog; wait for it to finish before the second):
+
 ```
 /plugin marketplace add Riyaancode/vibe-cook-audit
+```
+```
 /plugin install vibe-cook-audit@Riyaancode
 ```
+
+Or from any shell, no dialogs:
+
+```
+claude plugin marketplace add Riyaancode/vibe-cook-audit
+claude plugin install vibe-cook-audit@Riyaancode
+```
+
+The `/plugin` command is not available inside IDE chat panels; use the terminal or the CLI form.
 
 ## What `/cook` does
 
